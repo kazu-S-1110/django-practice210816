@@ -13,3 +13,13 @@ def user_page(request, user_name):
 def number_page(request, number, user_name):  # httpResponseに渡すものは複数でも可能
     user_name = user_name.upper()
     return HttpResponse(f'<h1>{number}番の{user_name}のページですよ〜</h1>')
+
+
+def add_num(request, num1, num2):
+    res_add = num1 + num2
+    res_product = num1 * num2
+    return HttpResponse(f'<h1>result add :{res_add}</h1><br><h2>result product : {res_product}</h2>')
+
+
+def index(request):
+    return render(request, "index.html")  # デフォルトでtemplates内のファイルを見に行ってくれるらしい
