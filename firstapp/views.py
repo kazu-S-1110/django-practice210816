@@ -26,3 +26,18 @@ def index(request):
     test_text = "yeeeee!"
     return render(request, "index.html",
                   context={"value": "Hello world", "test": test_text})  # デフォルトでtemplates内のファイルを見に行ってくれるらしい
+
+
+def home(request):
+    my_name = "hoge sage"
+    book = ["excel", "word", "python"]
+    pc = {
+        "apple": "mac",
+        "widnows": "surface",
+        "lenovo": "ideapad"
+    }
+    return render(request, "home.html", context={
+        "my_name": my_name,
+        "book": book,
+        "pc": pc
+    })
