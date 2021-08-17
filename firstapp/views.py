@@ -22,4 +22,7 @@ def add_num(request, num1, num2):
 
 
 def index(request):
-    return render(request, "index.html")  # デフォルトでtemplates内のファイルを見に行ってくれるらしい
+    # indexに変数を渡す方法
+    test_text = "yeeeee!"
+    return render(request, "index.html",
+                  context={"value": "Hello world", "test": test_text})  # デフォルトでtemplates内のファイルを見に行ってくれるらしい
