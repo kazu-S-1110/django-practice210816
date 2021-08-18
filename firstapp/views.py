@@ -46,5 +46,28 @@ def home(request):
 def sample1(request):
     return render(request, "sample1.html")
 
+
 def sample2(request):
     return render(request, "sample2.html")
+
+
+def sample(request):
+    name = "React"
+    birth = 2013
+    age = 2021
+    page_url = "https://ja.reactjs.org"
+    favo = [
+        "js", "jsx", "ts", "tsx"
+    ]
+    msg = """hello, react
+    I like nextjs,
+    and redux,
+    """
+    return render(request, "sample.html", context={
+        "name": name,
+        "birth": birth,
+        "age": age,
+        "page_url": page_url,
+        "favo": favo,
+        "msg": msg
+    })

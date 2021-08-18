@@ -1,0 +1,20 @@
+<h1>{{name | upper}}</h1>
+
+<h1>{{page_url| urlize}}</h1>
+
+<h2>{{salary|default:"secret"}}</h2>
+
+<h3>{{favo | random | upper}}</h3>
+<!--フィルタ機能は重ねることも可能-->
+
+<p>{{favo|join:"___"}}</p>
+
+<p>{{msg}}</p>
+
+<p>{{msg | linebreaks}}</p>
+
+
+{% filter upper %}
+<p>aaa</p>
+<p>testtest</p>
+{% endfilter %}
