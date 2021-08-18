@@ -30,7 +30,7 @@ def index(request):
 
 def home(request):
     my_name = "hoge sage"
-    book = ["excel", "word", "python"]
+    books = ["excel", "word", "python"]
     pc = {
         "apple": "mac",
         "widnows": "surface",
@@ -38,6 +38,13 @@ def home(request):
     }
     return render(request, "home.html", context={
         "my_name": my_name,
-        "book": book,
+        "books": books,
         "pc": pc
     })
+
+
+def sample1(request):
+    return render(request, "sample1.html")
+
+def sample2(request):
+    return render(request, "sample2.html")

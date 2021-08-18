@@ -8,10 +8,23 @@
     <title>home</title>
 </head>
 <body>
-<h1>{{my_name}}</h1>
-<h2>{{book}}</h2>
-<h3>{{book.2}}</h3>
-<h1>{{pc}}</h1>
-<h2>{{pc.apple}}</h2>
+<!--<h1>{{my_name}}</h1>-->
+<!--<h2>{{book}}</h2>-->
+<!--<h3>{{book.2}}</h3>-->
+<!--<h1>{{pc}}</h1>-->
+<!--<h2>{{pc.apple}}</h2>-->
+
+<ul>
+    {% for book in books%}
+    <li> {{book}}</li>
+    {% endfor %}
+</ul>
+
+{% if "word" in books %}
+    <p>{{books.1}}</p>
+{% elif "excel" in books %}
+    <p>excel in books</p>
+{% endif %}
+
 </body>
 </html>
