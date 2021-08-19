@@ -1,3 +1,6 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %} "/>
+
 <h1>{{name | upper}}</h1>
 
 <h1>{{page_url| urlize}}</h1>
@@ -20,3 +23,5 @@
 {% endfilter %}
 
 <a href="{% url 'firstapp:home' %}">home</a>
+
+<img src="{% static 'sample.jpg' %}"  width="500" />
