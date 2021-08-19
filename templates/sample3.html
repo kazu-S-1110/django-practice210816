@@ -1,0 +1,10 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %} "/>
+
+<p>country : {{country.name}}</p>
+<p> population : {{country.population}}</p>
+<p>capital : {{country.capital}}</p>
+
+<a href="{% url 'firstapp:home' %}">home</a>
+
+<img src="{% static 'sample.jpg' %}"  width="500" />
