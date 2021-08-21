@@ -24,7 +24,11 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="5ccf55ac-9890-4f3a-82a6-2826f490692e">
+        <schema name="main" object-types="table, view" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="5ccf55ac-9890-4f3a-82a6-2826f490692e">
@@ -491,7 +495,7 @@
       <session-browser>
         <disconnect-session value="ASK" />
         <kill-session value="ASK" />
-        <reload-on-filter-change value="false" />
+        <reload-on-filter-change value="true" />
       </session-browser>
       <compiler>
         <compile-type value="KEEP" />
