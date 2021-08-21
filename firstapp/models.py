@@ -1,10 +1,11 @@
 from django.db import models
 from django.utils import timezone
+import pytz
 
 
 class BaseMeta(models.Model):
-    created_at = models.DateTimeField(default=timezone.datetime.now())  # 現在の時刻を取得することが可能
-    updated_at = models.DateTimeField(default=timezone.datetime.now())
+    created_at = models.DateTimeField(default=timezone.datetime.now(pytz.timezone("Asia/Tokyo")))  # 現在の時刻を取得することが可能
+    updated_at = models.DateTimeField(default=timezone.datetime.now(pytz.timezone("Asia/Tokyo")))
 
     class Meta:
         abstract = True  # 抽象クラスにしてこれをインスタンス化できないようにする
