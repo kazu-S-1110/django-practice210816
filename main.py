@@ -55,7 +55,7 @@ from firstapp.models import Language
 
 
 # 複数の更新処理をする場合
-languages = Language.objects.filter(memo__isnull=True).all()
+# languages = Language.objects.filter(memo__isnull=True).all()
 # print(languages)
 # 下の処理だと一件毎にsaveをするため効率が悪い
 # for language in languages:
@@ -64,7 +64,13 @@ languages = Language.objects.filter(memo__isnull=True).all()
 #     language.save()
 
 # まとめてするなら下の方が効率的
-Language.objects.filter(memo__isnull=False).update(
-    memo="update2!",
-    updated_at=timezone.datetime.now(pytz.timezone("Asia/Tokyo"))
-)
+# Language.objects.filter(memo__isnull=False).update(
+#     memo="update2!",
+#     updated_at=timezone.datetime.now(pytz.timezone("Asia/Tokyo"))
+# )
+
+# 削除処理
+# Language.objects.filter(fav="Node").delete()
+s
+# 全件削除
+# Language.objects.all().delete()
