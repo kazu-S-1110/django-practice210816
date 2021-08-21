@@ -25,3 +25,6 @@ class Language(BaseMeta):  # 継承することが可能
         # db_table = 'language'
         index_together = [["fav", "like"]]
         ordering = ['startday']
+
+    def __str__(self):  # objの参照名を定義できる。
+        return f'{self.fav}'
