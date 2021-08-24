@@ -28,3 +28,32 @@ class Language(BaseMeta):  # 継承することが可能
 
     def __str__(self):  # objの参照名を定義できる。
         return f'{self.fav}'
+
+
+class Students(models.Model):
+    name = models.CharField(max_length=20)
+    age = models.IntegerField()
+    major = models.CharField(max_length=30)
+    school = models.ForeignKey(
+        "Schools", on_delete=models.CASCADE
+    )
+
+    class Meta:
+        db_table = "students"
+
+
+class Schools(models.Model):
+    name = models.CharField(max_length=20)
+    prefecture = models.ForeignKey(
+        "Prefectures", on_delete=models.CASCADE
+    )
+
+    class Meta:
+        db_table = "schools"
+
+
+class Prefectures(models.Model):
+    name = models.CharField(max_length=20)
+
+    class Meta:
+        db_table = "prefectures"

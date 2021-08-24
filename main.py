@@ -71,6 +71,6 @@ from firstapp.models import Language
 
 # 削除処理
 # Language.objects.filter(fav="Node").delete()
-s
+
 # 全件削除
 # Language.objects.all().delete()

@@ -46,6 +46,7 @@
     <filter-actions connection-id="5ccf55ac-9890-4f3a-82a6-2826f490692e" dataset="main.auth_user" active-filter-id="" />
     <filter-actions connection-id="5ccf55ac-9890-4f3a-82a6-2826f490692e" dataset="main.firstapp_language" active-filter-id="" />
     <filter-actions connection-id="5ccf55ac-9890-4f3a-82a6-2826f490692e" dataset="main.auth_group" active-filter-id="" />
+    <filter-actions connection-id="5ccf55ac-9890-4f3a-82a6-2826f490692e" dataset="main.schools" active-filter-id="" />
     <filter-actions connection-id="5ccf55ac-9890-4f3a-82a6-2826f490692e" dataset="main.firstapp_framework" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
