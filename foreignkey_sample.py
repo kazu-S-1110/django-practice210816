@@ -35,4 +35,21 @@ def insert_records():
                 student.save()
 
 
-insert_records()
+# insert_records()
+
+
+def select_student():
+    students = Students.objects.all()
+    for student in students:
+        print(student.id, student.name, student.school.id, student.school.name, student.school.prefecture.id,
+              student.school.prefecture.name)
+
+
+# select_student()
+
+# 削除してみる
+# Schools.objects.filter(id=1).delete()
+# schoolに紐づくstudentも削除される
+
+# Prefectures.objects.filter(id=1).delete()
+# prefectureに紐づくschoolも削除され、studentも削除される
