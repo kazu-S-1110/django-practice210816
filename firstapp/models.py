@@ -57,3 +57,24 @@ class Prefectures(models.Model):
 
     class Meta:
         db_table = "prefectures"
+
+
+# 1対1のテーブルを作ってみる。
+class Places(models.Model):
+    name = models.CharField(max_length=20)
+    address = models.CharField(max_length=20)
+
+    class Meta:
+        db_table = 'places'
+
+
+class Restaurants(models.Model):
+    place = models.OneToOneField(
+        Places,
+        on_delete=models.CASCADE,
+        primary_key=True,
+    )
+    name = models.CharField(max_length=40)
+
+    class Meta:
+        db_table = "restaurants"
